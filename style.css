@@ -25,6 +25,7 @@ body {
     align-items: center;
     margin-bottom: 20px;
     text-align: left;
+    flex-direction: row-reverse; /* Ensures image is on the right on desktop */
 }
 
 .profile-image {
@@ -51,10 +52,34 @@ p {
 }
 
 a {
-    color: #0000EE; /* Classic blue color for links */
+    color: #004DE4; /* Classic blue color for links */
     text-decoration: underline; /* Adds underline to links */
 }
 
 a:hover {
-    color: #551A8B; /* Classic purple color for visited links */
+    color: #004AFF; /* Classic purple color for visited links */
+}
+
+hr {
+    margin: 30px 0px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .header {
+        display: block;
+        text-align: center;
+        flex-direction: column; /* Stacks the image and header text vertically on mobile */
+    }
+
+    .profile-image {
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 15px;
+    }
 }
